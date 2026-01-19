@@ -44,10 +44,12 @@ export const CTASection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="xl">
-                Book A Strategy Call
-                <ArrowRight className="w-5 h-5" />
-              </Button>
+              <a href="https://cal.id/kaustubh-ai/quicksync?user=kaustubh-ai&overlayCalendar=true" target="_blank" rel="noopener noreferrer">
+                <Button variant="hero" size="xl">
+                  Book A Strategy Call
+                  <ArrowRight className="w-5 h-5" />
+                </Button>
+              </a>
               <Button variant="outline" size="xl">
                 View Case Studies
               </Button>

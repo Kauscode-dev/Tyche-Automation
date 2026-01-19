@@ -58,10 +58,12 @@ export const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Button variant="hero" size="xl">
-              Book A Strategy Call
-              <ArrowRight className="w-5 h-5" />
-            </Button>
+            <a href="https://cal.id/kaustubh-ai/quicksync?user=kaustubh-ai&overlayCalendar=true" target="_blank" rel="noopener noreferrer">
+              <Button variant="hero" size="xl">
+                Book A Strategy Call
+                <ArrowRight className="w-5 h-5" />
+              </Button>
+            </a>
             <Button variant="outline" size="xl">
               View Our Process
             </Button>
