@@ -18,7 +18,7 @@ export const Navigation = () => {
       <div className="section-container">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
+          <a href="/" className="flex items-center gap-2">
             <div className="w-8 h-8 bg-primary flex items-center justify-center">
               <span className="font-display font-bold text-primary-foreground text-lg">T</span>
             </div>
