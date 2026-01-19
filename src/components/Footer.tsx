@@ -17,15 +17,36 @@ export const Footer = () => {
 
           {/* Links */}
           <div className="flex items-center gap-8">
-            {["Services", "Process", "Why Us", "Contact"].map((link) => (
-              <a
-                key={link}
-                href={`#${link.toLowerCase().replace(" ", "-")}`}
-                className="text-muted-foreground hover:text-primary transition-colors text-sm"
-              >
-                {link}
-              </a>
-            ))}
+            <a
+              href="#services"
+              className="text-muted-foreground hover:text-primary transition-colors text-sm"
+            >
+              Services
+            </a>
+            <a
+              href="#process"
+              className="text-muted-foreground hover:text-primary transition-colors text-sm"
+            >
+              Process
+            </a>
+            <a
+              href="/why-us"
+              className="text-muted-foreground hover:text-primary transition-colors text-sm"
+            >
+              Why Us
+            </a>
+            <a
+              href="/careers"
+              className="text-muted-foreground hover:text-primary transition-colors text-sm"
+            >
+              Careers
+            </a>
+            <a
+              href="#contact"
+              className="text-muted-foreground hover:text-primary transition-colors text-sm"
+            >
+              Contact
+            </a>
           </div>
 
           {/* Social Links */}
