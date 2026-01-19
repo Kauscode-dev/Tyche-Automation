@@ -36,8 +36,8 @@ export const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
           >
-            Stop duct-taping{" "}
-            <span className="text-gradient">growth</span>
+            Transform Your Business{" "}
+            <span className="text-gradient">With AI</span>
           </motion.h1>
 
           {/* Subheadline */}
