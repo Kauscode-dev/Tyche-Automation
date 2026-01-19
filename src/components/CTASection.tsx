@@ -54,20 +54,6 @@ export const CTASection = () => {
                 View Case Studies
               </Button>
             </div>
-
-            {/* Trust indicators */}
-            <div className="mt-10 pt-8 border-t border-border">
-              <p className="text-muted-foreground text-sm mb-4">
-                Trusted by leading B2B SaaS & AI startups
-              </p>
-              <div className="flex flex-wrap items-center justify-center gap-8 opacity-50">
-                {["Clay", "Apollo", "Zapier", "HubSpot", "Notion"].map((brand) => (
-                  <span key={brand} className="font-display font-bold text-foreground/50">
-                    {brand}
-                  </span>
-                ))}
-              </div>
-            </div>
           </div>
         </motion.div>
       </div>
