@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Twitter } from "lucide-react";
+import { Mail, Linkedin, Twitter, Instagram } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -31,22 +31,34 @@ export const Footer = () => {
           {/* Social Links */}
           <div className="flex items-center gap-4">
             <a
-              href="#"
+              href="mailto:kaustubh@tycheautomation.online"
               className="w-10 h-10 bg-secondary border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all"
             >
               <Mail className="w-5 h-5" />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/company/tyche-automation/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 bg-secondary border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all"
             >
               <Linkedin className="w-5 h-5" />
             </a>
             <a
-              href="#"
+              href="https://x.com/Tyche_Business"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 bg-secondary border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all"
             >
               <Twitter className="w-5 h-5" />
+            </a>
+            <a
+              href="https://www.instagram.com/tyche_era/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 bg-secondary border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all"
+            >
+              <Instagram className="w-5 h-5" />
             </a>
           </div>
         </div>
