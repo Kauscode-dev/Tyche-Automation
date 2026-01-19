@@ -67,31 +67,8 @@ export const HeroSection = () => {
             </Button>
           </motion.div>
 
-          {/* Stats Row */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.5 }}
-            className="grid grid-cols-3 gap-8 mt-20 pt-10 border-t border-border"
-          >
-            {[
-              { value: "15+", label: "Years Experience" },
-              { value: "50+", label: "Startups Scaled" },
-              { value: "10x", label: "Pipeline Growth" },
-            ].map((stat, i) => (
-              <div key={i} className="text-center">
-                <div className="font-display text-3xl sm:text-4xl font-bold text-primary mb-1">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </div>
-            ))}
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+          {/* Bottom gradient fade */}
+          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
 };
