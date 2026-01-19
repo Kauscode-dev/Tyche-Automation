@@ -64,8 +64,8 @@ export const HeroSection = () => {
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </a>
-            <Button variant="outline" size="xl">
-              View Our Process
+            <Button variant="outline" size="xl" asChild>
+              <a href="/about">About Me</a>
             </Button>
           </motion.div>
         </div>
