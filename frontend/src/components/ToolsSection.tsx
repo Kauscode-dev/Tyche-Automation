@@ -90,7 +90,7 @@ export const ToolsSection = () => {
             </span>
           </div>
           <h3 className="text-foreground font-heading text-xl font-semibold">
-            We integrate the best tools to build your <span className="glass-highlight text-gradient">GTM stack</span>
+            We integrate the best tools to build your <span className="bg-gradient-to-r from-primary via-purple-500 to-accent bg-clip-text text-transparent font-bold">GTM stack</span>
           </h3>
         </motion.div>
       </div>
