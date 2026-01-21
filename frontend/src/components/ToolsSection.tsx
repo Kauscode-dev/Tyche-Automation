@@ -1,51 +1,98 @@
 import { motion } from "framer-motion";
 
-// Real AI tools used for GTM and automations
+// Real AI tools used for GTM and automations - using reliable logo sources
 const tools = [
-  { name: "Clay", logo: "https://cdn.worldvectorlogo.com/logos/clay-1.svg" },
-  { name: "Apollo", logo: "https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_f23e2293aaad4024d95ca52d55dfa9b6/apollo-io.png" },
-  { name: "Instantly", logo: "https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_c5c8c04f64f26d5be84b04b2b75a0ff2/instantly.png" },
-  { name: "Lemlist", logo: "https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_0c0f3d7e6e2c8d2f3a0d9a6f9e1e9f9f/lemlist.png" },
-  { name: "OpenAI", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/OpenAI_Logo.svg/512px-OpenAI_Logo.svg.png" },
-  { name: "HubSpot", logo: "https://www.vectorlogo.zone/logos/hubspot/hubspot-icon.svg" },
-  { name: "Salesforce", logo: "https://www.vectorlogo.zone/logos/salesforce/salesforce-icon.svg" },
-  { name: "Slack", logo: "https://www.vectorlogo.zone/logos/slack/slack-icon.svg" },
-  { name: "Notion", logo: "https://www.vectorlogo.zone/logos/notion/notion-icon.svg" },
-  { name: "Zapier", logo: "https://www.vectorlogo.zone/logos/zapier/zapier-icon.svg" },
-  { name: "Make", logo: "https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_96102e8c90c3cd4c62b9454e7b8f8c9a/make.png" },
-  { name: "Airtable", logo: "https://www.vectorlogo.zone/logos/airtable/airtable-icon.svg" },
-  { name: "Anthropic", logo: "https://upload.wikimedia.org/wikipedia/commons/7/78/Anthropic_logo.svg" },
-  { name: "Clearbit", logo: "https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_25d2c0c3d9a8f1a2e4c9e3c3e3c3e3c3/clearbit.png" },
-  { name: "LinkedIn", logo: "https://www.vectorlogo.zone/logos/linkedin/linkedin-icon.svg" },
-  { name: "Mailchimp", logo: "https://www.vectorlogo.zone/logos/mailchimp/mailchimp-icon.svg" },
-  { name: "Stripe", logo: "https://www.vectorlogo.zone/logos/stripe/stripe-icon.svg" },
-  { name: "Twilio", logo: "https://www.vectorlogo.zone/logos/twilio/twilio-icon.svg" },
-  { name: "Mixpanel", logo: "https://www.vectorlogo.zone/logos/mixpanel/mixpanel-icon.svg" },
-  { name: "Segment", logo: "https://www.vectorlogo.zone/logos/segment/segment-icon.svg" },
+  // Row 1 - Major platforms
+  { name: "Clay", logo: "https://cdn.prod.website-files.com/62fcefcfc488ea0611a33841/6310d26f6a69f93a67e10675_Clay-Logo-Asset-p-500.png" },
+  { name: "Apollo", logo: "https://www.apollo.io/favicon.ico" },
+  { name: "Instantly", logo: "https://instantly.ai/favicon.ico" },
+  { name: "Lemlist", logo: "https://www.lemlist.com/favicon.ico" },
+  { name: "OpenAI", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/OpenAI_Logo.svg/120px-OpenAI_Logo.svg.png" },
+  { name: "HubSpot", logo: "https://www.hubspot.com/hubfs/HubSpot_Logos/HubSpot-Inversed-Favicon.png" },
+  { name: "Salesforce", logo: "https://www.salesforce.com/favicon.ico" },
+  { name: "Slack", logo: "https://a.slack-edge.com/80588/marketing/img/meta/favicon-32.png" },
+  { name: "Notion", logo: "https://www.notion.so/images/favicon.ico" },
+  { name: "Zapier", logo: "https://cdn.zapier.com/zapier/images/favicon.ico" },
+  // Row 2 - More tools
+  { name: "Make", logo: "https://images.ctfassets.net/qqlj6g4ee76j/4kuQzwpYsHXYE3cEs9n9Ag/1ee0c4f78fb2fc95bb7461a64d1e5e2b/make-favicon-32x32.png" },
+  { name: "Airtable", logo: "https://airtable.com/favicon.ico" },
+  { name: "Anthropic", logo: "https://www.anthropic.com/favicon.ico" },
+  { name: "Clearbit", logo: "https://clearbit.com/favicon.ico" },
+  { name: "LinkedIn", logo: "https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" },
+  { name: "Mailchimp", logo: "https://mailchimp.com/release/plums/cxp/images/favicon-v2.png" },
+  { name: "Stripe", logo: "https://stripe.com/favicon.ico" },
+  { name: "Twilio", logo: "https://www.twilio.com/favicon.ico" },
+  { name: "Mixpanel", logo: "https://mixpanel.com/favicon.ico" },
+  { name: "Segment", logo: "https://segment.com/favicon.ico" },
+  // Row 3 - Additional tools
+  { name: "Outreach", logo: "https://www.outreach.io/favicon.ico" },
+  { name: "Gong", logo: "https://www.gong.io/favicon.ico" },
+  { name: "ZoomInfo", logo: "https://www.zoominfo.com/favicon.ico" },
+  { name: "Drift", logo: "https://www.drift.com/favicon.ico" },
+  { name: "Intercom", logo: "https://static.intercomassets.com/assets/favicon-32x32.png" },
+  { name: "Calendly", logo: "https://calendly.com/favicon.ico" },
+  { name: "Loom", logo: "https://cdn.loom.com/assets/favicons-loom/favicon-32x32.png" },
+  { name: "Figma", logo: "https://static.figma.com/app/icon/1/favicon.png" },
+  { name: "Webflow", logo: "https://assets-global.website-files.com/5d3e265ac89f6a3e64292efc/5d5595354de4fbdd8c554dba_webflow-favicon-32.png" },
+  { name: "Vercel", logo: "https://vercel.com/favicon.ico" },
+  // Row 4 - More integrations
+  { name: "GitHub", logo: "https://github.githubassets.com/favicons/favicon.svg" },
+  { name: "Google", logo: "https://www.google.com/favicon.ico" },
+  { name: "AWS", logo: "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico" },
+  { name: "Supabase", logo: "https://supabase.com/favicon.ico" },
+  { name: "MongoDB", logo: "https://www.mongodb.com/favicon.ico" },
+  { name: "Typeform", logo: "https://www.typeform.com/favicon.ico" },
+  { name: "Hotjar", logo: "https://www.hotjar.com/favicon.ico" },
+  { name: "Amplitude", logo: "https://amplitude.com/favicon.ico" },
 ];
+
+// Tool card component with fallback
+const ToolCard = ({ tool }: { tool: typeof tools[0] }) => {
+  return (
+    <div className="flex items-center justify-center mx-4 px-5 py-3 bg-white rounded-xl border border-border shadow-sm hover:shadow-md hover:border-primary/20 transition-all min-w-[150px] group">
+      <div className="w-7 h-7 mr-3 flex items-center justify-center">
+        <img
+          src={tool.logo}
+          alt={tool.name}
+          className="w-full h-full object-contain"
+          onError={(e) => {
+            // Hide broken image and show text fallback
+            e.currentTarget.style.display = 'none';
+            const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+            if (fallback) fallback.style.display = 'flex';
+          }}
+        />
+        <div 
+          className="w-7 h-7 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 items-center justify-center text-xs font-bold text-primary hidden"
+        >
+          {tool.name.substring(0, 2)}
+        </div>
+      </div>
+      <span className="font-medium text-foreground text-sm group-hover:text-primary transition-colors">{tool.name}</span>
+    </div>
+  );
+};
 
 export const ToolsSection = () => {
   return (
-    <section id="tools" className="py-16 bg-secondary/30 border-y border-border">
-      <div className="section-container mb-8">
-        <motion.p
+    <section id="tools" className="py-12 bg-white/50 backdrop-blur-sm border-y border-border">
+      <div className="section-container mb-6">
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center text-muted-foreground text-sm uppercase tracking-widest font-medium mb-2"
+          className="text-center"
         >
-          Powered by 20+ AI & Automation Tools
-        </motion.p>
-        <motion.h3
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-center text-foreground font-heading text-xl font-semibold"
-        >
-          We integrate the best tools for your GTM stack
-        </motion.h3>
+          <div className="glass-card inline-block px-6 py-2 mb-3">
+            <span className="text-muted-foreground text-sm uppercase tracking-widest font-medium">
+              Powered by <span className="text-gradient font-bold">75+</span> AI & Automation Tools
+            </span>
+          </div>
+          <h3 className="text-foreground font-heading text-xl font-semibold">
+            We integrate the best tools to build your <span className="glass-highlight text-gradient">GTM stack</span>
+          </h3>
+        </motion.div>
       </div>
 
       {/* Marquee container */}
@@ -57,25 +104,7 @@ export const ToolsSection = () => {
           className="marquee"
         >
           {[...tools, ...tools].map((tool, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-center mx-6 px-4 py-3 bg-white rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow min-w-[140px]"
-            >
-              <img
-                src={tool.logo}
-                alt={tool.name}
-                className="w-8 h-8 object-contain mr-3"
-                onError={(e) => {
-                  // Fallback to text if image fails
-                  e.currentTarget.style.display = 'none';
-                  e.currentTarget.nextElementSibling?.classList.remove('hidden');
-                }}
-              />
-              <span className="font-medium text-foreground text-sm">{tool.name}</span>
-              <span className="hidden w-8 h-8 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center font-bold text-primary text-xs mr-3">
-                {tool.name.substring(0, 2)}
-              </span>
-            </div>
+            <ToolCard key={`${tool.name}-${index}`} tool={tool} />
           ))}
         </motion.div>
       </div>
