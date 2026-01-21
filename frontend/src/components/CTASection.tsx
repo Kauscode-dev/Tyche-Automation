@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight, Sparkles, Calendar } from "lucide-react";
+import { ArrowRight, Calendar, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const CTASection = () => {
@@ -8,58 +8,47 @@ export const CTASection = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section id="contact" className="py-32 relative overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/20 to-background" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] rounded-full bg-gradient-to-r from-primary/10 to-accent/10 blur-[150px]" />
-
-      <div className="section-container relative z-10">
+    <section id="contact" className="py-24 bg-gradient-to-b from-white to-secondary/30">
+      <div className="section-container">
         <motion.div
           ref={ref}
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={isInView ? { opacity: 1, scale: 1 } : {}}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
           className="max-w-4xl mx-auto"
         >
-          <div className="relative p-12 md:p-16 rounded-3xl overflow-hidden">
-            {/* Card background with gradient border */}
-            <div className="absolute inset-0 bg-card/80 backdrop-blur-xl" />
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5" />
-            <div className="absolute inset-[1px] rounded-3xl bg-card/90" />
+          <div className="bg-gradient-to-br from-foreground to-slate-800 rounded-3xl p-12 md:p-16 text-center text-white relative overflow-hidden">
+            {/* Background decoration */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-primary/30 to-accent/30 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full blur-3xl" />
             
-            {/* Gradient border effect */}
-            <div className="absolute inset-0 rounded-3xl p-[1px] bg-gradient-to-br from-primary/50 via-transparent to-accent/50">
-              <div className="w-full h-full rounded-3xl bg-card" />
-            </div>
-
-            <div className="relative z-10 text-center">
+            <div className="relative z-10">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.2 }}
-                className="badge-gradient mb-6 inline-flex items-center gap-2"
+                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-white/80 text-sm font-medium mb-6"
               >
-                <Sparkles className="w-4 h-4" />
-                <span>Limited Availability</span>
+                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                Available for new projects
               </motion.div>
 
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.3 }}
-                className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6"
+                className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-6"
               >
-                Ready to <span className="text-gradient">transform</span> your GTM?
+                Ready to automate your GTM?
               </motion.h2>
-              
+
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.4 }}
-                className="text-muted-foreground text-lg max-w-2xl mx-auto mb-10 leading-relaxed"
+                className="text-white/70 text-lg mb-10 max-w-2xl mx-auto"
               >
-                Most founders struggle with duct-taped growth systems. 
-                Let's build something that actually works—together.
+                Book a free strategy call. We'll audit your current GTM, identify quick wins, and show you exactly how we can help.
               </motion.p>
 
               <motion.div
@@ -68,26 +57,28 @@ export const CTASection = () => {
                 transition={{ delay: 0.5 }}
                 className="flex flex-col sm:flex-row gap-4 justify-center"
               >
-                <a href="https://cal.id/kaustubh-ai/quicksync?user=kaustubh-ai&overlayCalendar=true" target="_blank" rel="noopener noreferrer">
-                  <Button variant="gradient" size="xl">
+                <a href="https://cal.id/kaustubh-ai/quicksync" target="_blank" rel="noopener noreferrer">
+                  <Button size="xl" className="bg-white text-foreground hover:bg-white/90 rounded-full font-bold shadow-xl">
                     <Calendar className="w-5 h-5" />
-                    <span>Book A Strategy Call</span>
+                    Book Strategy Call
                     <ArrowRight className="w-5 h-5" />
                   </Button>
                 </a>
-                <Button variant="outline-gradient" size="xl">
-                  <span>View Case Studies</span>
-                </Button>
+                <a href="mailto:kaustubh@tycheautomation.online">
+                  <Button size="xl" variant="outline" className="border-white/30 text-white hover:bg-white/10 rounded-full">
+                    <MessageCircle className="w-5 h-5" />
+                    Send a Message
+                  </Button>
+                </a>
               </motion.div>
 
-              {/* Trust indicator */}
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : {}}
                 transition={{ delay: 0.7 }}
-                className="mt-8 text-sm text-muted-foreground"
+                className="mt-8 text-sm text-white/50"
               >
-                🟢 Response within 24 hours • No commitment required
+                Free 30-min consultation • No commitment required • Response within 24 hours
               </motion.p>
             </div>
           </div>
