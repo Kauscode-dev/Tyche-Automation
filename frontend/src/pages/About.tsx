@@ -2,7 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 const About = () => {
   const containerVariants = {
@@ -21,27 +21,33 @@ const About = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5, ease: "easeOut" },
+      transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
     },
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="pt-32 pb-20 relative overflow-hidden">
+        {/* Background effects */}
+        <div className="absolute inset-0 bg-mesh" />
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-primary/10 blur-[150px]" />
+        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-accent/10 blur-[120px]" />
+        
         <motion.div
-          className="max-w-4xl mx-auto"
+          className="section-container relative z-10"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          <motion.div variants={itemVariants}>
+          <motion.div variants={itemVariants} className="max-w-4xl">
+            <span className="badge-gradient mb-6 inline-block">About Me</span>
             <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 text-foreground">
               Kaustubh
             </h1>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold mb-8 text-primary">
+            <h2 className="font-display text-2xl sm:text-3xl font-bold mb-8 text-gradient">
               AI-Native GTM Operator
             </h2>
           </motion.div>
@@ -55,7 +61,7 @@ const About = () => {
 
           <motion.p
             variants={itemVariants}
-            className="text-lg sm:text-xl text-muted-foreground max-w-2xl mb-8 leading-relaxed"
+            className="text-lg sm:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed"
           >
             Product marketing, AI outbound, and automation—designed as one coherent system.
           </motion.p>
@@ -65,336 +71,124 @@ const About = () => {
             className="flex flex-col sm:flex-row gap-4"
           >
             <a href="https://cal.id/kaustubh-ai/quicksync?user=kaustubh-ai&overlayCalendar=true" target="_blank" rel="noopener noreferrer">
-              <Button variant="hero" size="xl">
-                Work with me
+              <Button variant="gradient" size="xl">
+                <span>Work with me</span>
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </a>
-            <Button variant="outline" size="xl">
-              Read my GTM thinking
+            <Button variant="outline-gradient" size="xl">
+              <span>Read my GTM thinking</span>
             </Button>
           </motion.div>
         </motion.div>
       </section>
 
       {/* How I Think Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-border">
+      <section className="py-24 border-t border-white/5">
         <motion.div
-          className="max-w-4xl mx-auto"
+          className="section-container"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <motion.h3
-            variants={itemVariants}
-            className="font-display text-4xl sm:text-5xl font-bold mb-12 text-foreground"
-          >
-            How I Think About Modern GTM
-          </motion.h3>
+          <motion.div variants={itemVariants} className="max-w-4xl">
+            <span className="badge-gradient mb-4 inline-block">Philosophy</span>
+            <h3 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-12 text-foreground">
+              How I Think About <span className="text-gradient">Modern GTM</span>
+            </h3>
+          </motion.div>
 
           <motion.p
             variants={itemVariants}
-            className="text-lg text-muted-foreground mb-8 leading-relaxed"
+            className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-3xl"
           >
             Most GTM fails for predictable reasons.
-            <br />
             Not because founders aren't working hard—but because the system is broken.
           </motion.p>
 
           <motion.p
             variants={itemVariants}
-            className="text-lg text-muted-foreground mb-10 leading-relaxed"
+            className="text-lg text-muted-foreground mb-10 leading-relaxed max-w-3xl"
           >
             Here's what I've learned building and fixing GTM for B2B SaaS and AI startups:
           </motion.p>
 
           <motion.div
             variants={itemVariants}
-            className="space-y-6"
+            className="space-y-4 max-w-3xl"
           >
-            <div className="flex gap-4">
-              <div className="w-1 bg-primary flex-shrink-0" />
-              <p className="text-lg text-foreground">Outbound fails when messaging is vague—not when volume is low.</p>
-            </div>
-            <div className="flex gap-4">
-              <div className="w-1 bg-primary flex-shrink-0" />
-              <p className="text-lg text-foreground">AI doesn't replace GTM thinking. It exposes weak thinking faster.</p>
-            </div>
-            <div className="flex gap-4">
-              <div className="w-1 bg-primary flex-shrink-0" />
-              <p className="text-lg text-foreground">GTM breaks when story, signal, and systems are built in isolation.</p>
-            </div>
-            <div className="flex gap-4">
-              <div className="w-1 bg-primary flex-shrink-0" />
-              <p className="text-lg text-foreground">Hiring SDRs before narrative clarity creates noise, not pipeline.</p>
-            </div>
-            <div className="flex gap-4">
-              <div className="w-1 bg-primary flex-shrink-0" />
-              <p className="text-lg text-foreground">Founders should own GTM early—then systemize it, not outsource it.</p>
-            </div>
-          </motion.div>
-
-          <motion.p
-            variants={itemVariants}
-            className="text-lg text-muted-foreground mt-10 italic"
-          >
-            If you disagree with most of this, we probably won't work well together—and that's fine.
-          </motion.p>
-        </motion.div>
-      </section>
-
-      {/* Why I Do This */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-border">
-        <motion.div
-          className="max-w-4xl mx-auto"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <motion.h3
-            variants={itemVariants}
-            className="font-display text-4xl sm:text-5xl font-bold mb-12 text-foreground"
-          >
-            Why I Do This
-          </motion.h3>
-
-          <motion.div
-            variants={itemVariants}
-            className="space-y-6 text-lg text-muted-foreground leading-relaxed"
-          >
-            <p>
-              I kept seeing founders duct-tape growth with tools, agencies, and SDR teams—without ever fixing the core story or signal.
-            </p>
-
-            <p className="text-foreground font-semibold">
-              The result was always the same:
-            </p>
-
-            <div className="flex gap-4">
-              <div className="w-1 bg-primary flex-shrink-0" />
-              <div>
-                <p>More activity.</p>
-                <p>More dashboards.</p>
-                <p>No real momentum.</p>
+            {[
+              "Outbound fails when messaging is vague—not when volume is low.",
+              "AI doesn't replace GTM thinking. It exposes weak thinking faster.",
+              "GTM breaks when story, signal, and systems are built in isolation.",
+              "Hiring SDRs before narrative clarity creates noise, not pipeline.",
+              "Founders should own GTM early—then systemize it, not outsource it.",
+            ].map((point, index) => (
+              <div key={index} className="flex gap-4 items-start glass-card p-4">
+                <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                <p className="text-lg text-foreground">{point}</p>
               </div>
-            </div>
-
-            <p>
-              So I started building GTM the way software is built:
-              <br />
-              Clear narrative first.
-              <br />
-              Signals over volume.
-              <br />
-              Systems that compound instead of burn out.
-            </p>
-
-            <p>
-              That approach became the foundation for everything I do now.
-            </p>
+            ))}
           </motion.div>
         </motion.div>
       </section>
 
-      {/* My GTM Operating System */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-border">
+      {/* GTM Operating System */}
+      <section className="py-24 border-t border-white/5 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-secondary/20 to-background" />
         <motion.div
-          className="max-w-4xl mx-auto"
+          className="section-container relative z-10"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <motion.h3
-            variants={itemVariants}
-            className="font-display text-4xl sm:text-5xl font-bold mb-12 text-foreground"
-          >
-            My GTM Operating System
-          </motion.h3>
+          <motion.div variants={itemVariants}>
+            <span className="badge-gradient mb-4 inline-block">The System</span>
+            <h3 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-12 text-foreground">
+              My GTM <span className="text-gradient">Operating System</span>
+            </h3>
+          </motion.div>
 
           <motion.p
             variants={itemVariants}
-            className="text-lg text-muted-foreground mb-8 leading-relaxed"
+            className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-3xl"
           >
             I use a single operating system to design and run GTM.
-            <br />
-            <br />
-            I call it <span className="text-primary font-semibold">Tyche</span>.
+            I call it <span className="text-gradient font-semibold">Tyche</span>.
           </motion.p>
 
           <motion.p
             variants={itemVariants}
-            className="text-lg text-muted-foreground mb-10 leading-relaxed"
+            className="text-lg text-muted-foreground mb-12 leading-relaxed max-w-3xl"
           >
-            It's not a tool.
-            <br />
-            It's not a funnel.
-            <br />
-            It's a way of thinking.
-          </motion.p>
-
-          <motion.p
-            variants={itemVariants}
-            className="text-lg text-muted-foreground mb-12 leading-relaxed"
-          >
-            Tyche is built on four layers:
+            It's not a tool. It's not a funnel. It's a way of thinking.
           </motion.p>
 
           <motion.div
             variants={itemVariants}
-            className="grid md:grid-cols-2 gap-8"
+            className="grid md:grid-cols-2 gap-6 max-w-4xl"
           >
-            <div className="bg-card border border-border p-8 rounded-lg">
-              <h4 className="text-xl font-display font-bold text-primary mb-3">Narrative</h4>
-              <p className="text-muted-foreground">Clear positioning and founder POV that makes the right buyers lean in.</p>
-            </div>
-            <div className="bg-card border border-border p-8 rounded-lg">
-              <h4 className="text-xl font-display font-bold text-primary mb-3">Signal</h4>
-              <p className="text-muted-foreground">Identifying accounts that are actually ready—using intent, behavior, and context.</p>
-            </div>
-            <div className="bg-card border border-border p-8 rounded-lg">
-              <h4 className="text-xl font-display font-bold text-primary mb-3">Distribution</h4>
-              <p className="text-muted-foreground">Outbound and content designed to feel relevant, not automated.</p>
-            </div>
-            <div className="bg-card border border-border p-8 rounded-lg">
-              <h4 className="text-xl font-display font-bold text-primary mb-3">Automation</h4>
-              <p className="text-muted-foreground">Infrastructure that scales what works—without losing judgment or quality.</p>
-            </div>
+            {[
+              { title: "Narrative", desc: "Clear positioning and founder POV that makes the right buyers lean in." },
+              { title: "Signal", desc: "Identifying accounts that are actually ready—using intent, behavior, and context." },
+              { title: "Distribution", desc: "Outbound and content designed to feel relevant, not automated." },
+              { title: "Automation", desc: "Infrastructure that scales what works—without losing judgment or quality." },
+            ].map((item, index) => (
+              <div key={index} className="glass-card-hover p-8">
+                <h4 className="text-xl font-display font-bold text-gradient mb-3">{item.title}</h4>
+                <p className="text-muted-foreground">{item.desc}</p>
+              </div>
+            ))}
           </motion.div>
-
-          <motion.p
-            variants={itemVariants}
-            className="text-lg text-muted-foreground mt-10 italic"
-          >
-            Every engagement is different.
-            <br />
-            The system stays the same.
-          </motion.p>
-        </motion.div>
-      </section>
-
-      {/* How I Work */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-border">
-        <motion.div
-          className="max-w-4xl mx-auto"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <motion.h3
-            variants={itemVariants}
-            className="font-display text-4xl sm:text-5xl font-bold mb-12 text-foreground"
-          >
-            How I Work With Founders
-          </motion.h3>
-
-          <motion.p
-            variants={itemVariants}
-            className="text-lg text-muted-foreground mb-10 leading-relaxed"
-          >
-            I don't run an agency.
-            <br />
-            I work hands-on with a small number of founders at a time.
-          </motion.p>
-
-          <motion.p
-            variants={itemVariants}
-            className="text-lg text-muted-foreground mb-8 leading-relaxed"
-          >
-            Typically in one of three ways:
-          </motion.p>
-
-          <motion.div
-            variants={itemVariants}
-            className="space-y-6 mb-10"
-          >
-            <div className="flex gap-4">
-              <div className="w-1 bg-primary flex-shrink-0" />
-              <p className="text-lg text-foreground">Designing and building a complete GTM system from scratch</p>
-            </div>
-            <div className="flex gap-4">
-              <div className="w-1 bg-primary flex-shrink-0" />
-              <p className="text-lg text-foreground">Fixing broken outbound, messaging, or GTM ops</p>
-            </div>
-            <div className="flex gap-4">
-              <div className="w-1 bg-primary flex-shrink-0" />
-              <p className="text-lg text-foreground">Acting as a GTM partner during critical growth or fundraising phases</p>
-            </div>
-          </motion.div>
-
-          <motion.p
-            variants={itemVariants}
-            className="text-lg text-muted-foreground"
-          >
-            If you're looking for volume, vanity metrics, or outsourced hustle—I'm not a fit.
-            <br />
-            <br />
-            If you want clarity, leverage, and a system you actually control—we should talk.
-          </motion.p>
-        </motion.div>
-      </section>
-
-      {/* Who This Is For */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-border">
-        <motion.div
-          className="max-w-4xl mx-auto"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <motion.h3
-            variants={itemVariants}
-            className="font-display text-4xl sm:text-5xl font-bold mb-12 text-foreground"
-          >
-            Who This Is For
-          </motion.h3>
-
-          <motion.p
-            variants={itemVariants}
-            className="text-lg text-muted-foreground mb-10 leading-relaxed"
-          >
-            This work is usually a fit for:
-          </motion.p>
-
-          <motion.div
-            variants={itemVariants}
-            className="space-y-4 mb-10"
-          >
-            <div className="flex gap-4">
-              <div className="w-1 bg-primary flex-shrink-0" />
-              <p className="text-lg text-foreground">Seed to Series C B2B SaaS & AI founders</p>
-            </div>
-            <div className="flex gap-4">
-              <div className="w-1 bg-primary flex-shrink-0" />
-              <p className="text-lg text-foreground">Founders running GTM themselves and hitting a ceiling</p>
-            </div>
-            <div className="flex gap-4">
-              <div className="w-1 bg-primary flex-shrink-0" />
-              <p className="text-lg text-foreground">Lean teams that don't want SDR factories or bloated agencies</p>
-            </div>
-            <div className="flex gap-4">
-              <div className="w-1 bg-primary flex-shrink-0" />
-              <p className="text-lg text-foreground">Startups that need real traction—not just activity—for fundraising or scale</p>
-            </div>
-          </motion.div>
-
-          <motion.p
-            variants={itemVariants}
-            className="text-lg text-muted-foreground italic"
-          >
-            If that sounds like you, keep reading. Or reach out.
-          </motion.p>
         </motion.div>
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-border">
+      <section className="py-24 border-t border-white/5">
         <motion.div
-          className="max-w-4xl mx-auto text-center"
+          className="section-container text-center"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -402,9 +196,9 @@ const About = () => {
         >
           <motion.h3
             variants={itemVariants}
-            className="font-display text-4xl sm:text-5xl font-bold mb-8 text-foreground"
+            className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-foreground"
           >
-            Ready to Scale GTM Thoughtfully?
+            Ready to Scale GTM <span className="text-gradient">Thoughtfully</span>?
           </motion.h3>
 
           <motion.p
@@ -419,13 +213,13 @@ const About = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <a href="https://cal.id/kaustubh-ai/quicksync?user=kaustubh-ai&overlayCalendar=true" target="_blank" rel="noopener noreferrer">
-              <Button variant="hero" size="xl">
-                Work with me
+              <Button variant="gradient" size="xl">
+                <span>Work with me</span>
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </a>
-            <Button variant="outline" size="xl">
-              Read my GTM essays
+            <Button variant="outline-gradient" size="xl">
+              <span>Read my GTM essays</span>
             </Button>
           </motion.div>
         </motion.div>
