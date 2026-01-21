@@ -98,7 +98,7 @@ export const ServicesSection = () => {
             <span className="badge bg-transparent p-0">What We Do</span>
           </div>
           <h2 className="font-heading text-4xl sm:text-5xl font-bold text-foreground mb-4">
-            Four services. <span className="glass-highlight text-gradient">One system.</span>
+            Four services. <span className="bg-gradient-to-r from-primary via-purple-500 to-accent bg-clip-text text-transparent">One system.</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Everything you need to build a scalable GTM engine—without the agency bloat.

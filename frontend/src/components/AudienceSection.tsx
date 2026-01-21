@@ -100,7 +100,7 @@ export const AudienceSection = () => {
               <span className="badge bg-transparent p-0">Who We Help</span>
             </div>
             <h2 className="font-heading text-4xl sm:text-5xl font-bold text-foreground mb-6">
-              Built for <span className="glass-highlight text-gradient">ambitious founders</span>
+              Built for <span className="bg-gradient-to-r from-primary via-purple-500 to-accent bg-clip-text text-transparent">ambitious founders</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-8">
               We work with B2B founders who want leverage—not just more activity.

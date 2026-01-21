@@ -83,7 +83,7 @@ export const ProcessSection = () => {
             <span className="badge bg-transparent p-0">How It Works</span>
           </div>
           <h2 className="font-heading text-4xl sm:text-5xl font-bold text-foreground mb-4">
-            From zero to <span className="glass-highlight text-gradient">pipeline</span> in 2-4 weeks
+            From zero to <span className="bg-gradient-to-r from-primary via-purple-500 to-accent bg-clip-text text-transparent">pipeline</span> in 2-4 weeks
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             A proven 4-step process that gets you results fast—without the typical agency timeline.
