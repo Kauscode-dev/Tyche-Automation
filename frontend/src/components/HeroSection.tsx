@@ -1,113 +1,143 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, Play } from "lucide-react";
+import { ArrowRight, Play, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 bg-mesh" />
-      <div className="absolute inset-0 bg-hero-gradient" />
-      
-      {/* Animated Gradient Orbs */}
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-primary/20 blur-[120px] animate-pulse-glow" />
-      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-accent/20 blur-[100px] animate-pulse-glow" style={{ animationDelay: '2s' }} />
-      
-      {/* Grid Pattern */}
-      <div className="absolute inset-0 grid-pattern opacity-20" />
+    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gradient-to-b from-primary/5 via-white to-white">
+      {/* Decorative blobs */}
+      <div className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-3xl opacity-60" />
+      <div className="absolute bottom-20 left-0 w-80 h-80 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full blur-3xl opacity-40" />
 
       <div className="section-container relative z-10">
-        <div className="max-w-5xl mx-auto text-center">
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="inline-flex items-center gap-2 badge-gradient mb-8"
-          >
-            <Sparkles className="w-4 h-4" />
-            <span>AI-Powered GTM Systems for B2B Startups</span>
-          </motion.div>
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* Left Content */}
+          <div className="max-w-2xl">
+            {/* Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="badge mb-6"
+            >
+              🚀 AI-Powered GTM for B2B Founders
+            </motion.div>
 
-          {/* Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[1.1] mb-8 tracking-tight"
-          >
-            Transform Your
-            <br />
-            <span className="text-gradient">Go-to-Market</span> Strategy
-          </motion.h1>
+            {/* Headline */}
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 text-foreground"
+            >
+              Automate Your
+              <br />
+              <span className="text-gradient">Go-to-Market</span>
+            </motion.h1>
 
-          {/* Subheadline */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed"
-          >
-            Build a unified GTM engine that blends AI outbound, product marketing, 
-            founder-led content, and intelligent automation—all working together.
-          </motion.p>
+            {/* Subheadline */}
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-lg sm:text-xl text-muted-foreground mb-8 leading-relaxed font-body"
+            >
+              We build AI-powered systems that handle your outbound, content, and automation—so you can focus on closing deals, not chasing leads.
+            </motion.p>
 
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
-            <a href="https://cal.id/kaustubh-ai/quicksync?user=kaustubh-ai&overlayCalendar=true" target="_blank" rel="noopener noreferrer">
-              <Button variant="gradient" size="xl">
-                <span>Book A Strategy Call</span>
-                <ArrowRight className="w-5 h-5" />
-              </Button>
-            </a>
-            <Button variant="outline-gradient" size="xl" asChild>
-              <a href="/about" className="flex items-center gap-2">
-                <Play className="w-4 h-4" />
-                <span>Learn More</span>
+            {/* Trust Points */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="flex flex-wrap gap-4 mb-8"
+            >
+              {["No SDR Army Needed", "Results in 2 Weeks", "Built for Founders"].map((point) => (
+                <div key={point} className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <CheckCircle className="w-4 h-4 text-primary" />
+                  <span>{point}</span>
+                </div>
+              ))}
+            </motion.div>
+
+            {/* CTA Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="flex flex-col sm:flex-row gap-4"
+            >
+              <a href="https://cal.id/kaustubh-ai/quicksync" target="_blank" rel="noopener noreferrer">
+                <Button variant="gradient" size="xl">
+                  Book a Strategy Call
+                  <ArrowRight className="w-5 h-5" />
+                </Button>
               </a>
-            </Button>
-          </motion.div>
+              <Button variant="outline" size="xl" asChild>
+                <a href="#process" className="flex items-center gap-2">
+                  <Play className="w-4 h-4" />
+                  See How It Works
+                </a>
+              </Button>
+            </motion.div>
+          </div>
 
-          {/* Trust indicators */}
+          {/* Right Image */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.7, delay: 0.5 }}
-            className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-8 text-muted-foreground text-sm"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="relative hidden lg:block"
           >
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-              <span>Available for new projects</span>
-            </div>
-            <div className="hidden sm:block w-px h-4 bg-border" />
-            <div className="flex items-center gap-2">
-              <span>Trusted by B2B SaaS & AI startups</span>
+            <div className="relative">
+              {/* Main Image */}
+              <div className="img-container rounded-3xl overflow-hidden shadow-2xl">
+                <img
+                  src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Team collaborating on GTM strategy"
+                  className="w-full h-[500px] object-cover"
+                />
+              </div>
+              
+              {/* Floating Card */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-4 border border-border"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-400 to-green-500 flex items-center justify-center">
+                    <span className="text-white text-xl">📈</span>
+                  </div>
+                  <div>
+                    <p className="font-heading font-bold text-foreground">10x Pipeline</p>
+                    <p className="text-sm text-muted-foreground">Average growth</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Second Floating Card */}
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1 }}
+                className="absolute -top-4 -right-4 bg-white rounded-2xl shadow-xl p-4 border border-border"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                    <span className="text-white text-xl">🤖</span>
+                  </div>
+                  <div>
+                    <p className="font-heading font-bold text-foreground">AI-Powered</p>
+                    <p className="text-sm text-muted-foreground">24/7 automation</p>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>
       </div>
-
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background via-background/80 to-transparent" />
-      
-      {/* Decorative elements */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1, delay: 0.5 }}
-        className="absolute bottom-20 left-10 w-20 h-20 border border-primary/20 rounded-2xl rotate-12 hidden lg:block"
-      />
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1, delay: 0.7 }}
-        className="absolute top-40 right-20 w-16 h-16 border border-accent/20 rounded-full hidden lg:block"
-      />
     </section>
   );
 };

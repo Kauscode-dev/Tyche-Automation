@@ -5,21 +5,20 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-semibold ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 font-display",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-semibold ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 font-heading",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 rounded-xl shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 rounded-full shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5",
         destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90 rounded-xl",
+          "bg-destructive text-destructive-foreground hover:bg-destructive/90 rounded-full",
         outline:
-          "border-2 border-border bg-transparent text-foreground hover:bg-secondary hover:border-primary/50 rounded-xl",
+          "border-2 border-foreground/20 bg-transparent text-foreground hover:border-primary hover:bg-primary/5 hover:text-primary rounded-full",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-xl",
-        ghost: "hover:bg-accent/10 hover:text-accent-foreground rounded-xl",
+          "bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-full",
+        ghost: "hover:bg-accent/10 hover:text-accent-foreground rounded-full",
         link: "text-primary underline-offset-4 hover:underline",
-        gradient: "relative overflow-hidden rounded-xl text-white font-bold bg-gradient-to-r from-primary to-accent shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/40 hover:-translate-y-1 before:absolute before:inset-0 before:bg-gradient-to-r before:from-primary/80 before:to-accent/80 before:opacity-0 before:transition-opacity hover:before:opacity-100 [&>*]:relative [&>*]:z-10",
-        "outline-gradient": "relative rounded-xl font-bold bg-background hover:bg-secondary/50 border-2 border-transparent bg-clip-padding hover:-translate-y-0.5 transition-all duration-300 before:absolute before:inset-0 before:-z-10 before:m-[-2px] before:rounded-xl before:bg-gradient-to-r before:from-primary before:to-accent",
+        gradient: "relative overflow-hidden rounded-full text-white font-bold bg-gradient-to-r from-primary via-purple-500 to-accent shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/40 hover:-translate-y-1",
       },
       size: {
         default: "h-11 px-6 py-2",
