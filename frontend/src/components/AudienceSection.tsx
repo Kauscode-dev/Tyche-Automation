@@ -5,8 +5,8 @@ import { Rocket, UserCheck, Users, TrendingUp } from "lucide-react";
 const audiences = [
   {
     icon: Rocket,
-    title: "Seed to Series C B2B",
-    subtitle: "SaaS & AI startups",
+    title: "Seed to Series C",
+    subtitle: "B2B SaaS & AI startups",
     description: "Early-stage startups building predictable GTM and pipeline fast.",
   },
   {
@@ -17,13 +17,13 @@ const audiences = [
   },
   {
     icon: Users,
-    title: "Tech teams that won't hire",
-    subtitle: "SDRs or bloated agencies",
+    title: "Lean tech teams",
+    subtitle: "that won't hire SDRs",
     description: "Lean teams that want system-driven GTM, not spam or overhead.",
   },
   {
     icon: TrendingUp,
-    title: "Startups that need traction",
+    title: "Startups needing traction",
     subtitle: "for fundraising or scaling",
     description: "Show investors momentum with pipeline clarity and growth.",
   },
@@ -34,12 +34,10 @@ export const AudienceSection = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section className="py-24 relative overflow-hidden">
-      {/* Glow effect */}
-      <div 
-        className="absolute top-1/2 left-0 w-[600px] h-[600px] -translate-y-1/2 -translate-x-1/2 opacity-30"
-        style={{ background: "var(--gradient-glow)" }}
-      />
+    <section className="py-32 relative overflow-hidden">
+      {/* Background glow */}
+      <div className="absolute top-1/2 left-0 w-[600px] h-[600px] -translate-y-1/2 -translate-x-1/2 rounded-full bg-accent/10 blur-[150px]" />
+      <div className="absolute top-1/2 right-0 w-[400px] h-[400px] -translate-y-1/2 translate-x-1/2 rounded-full bg-primary/10 blur-[120px]" />
 
       <div className="section-container relative z-10">
         <motion.div
@@ -49,11 +47,9 @@ export const AudienceSection = () => {
           transition={{ duration: 0.6 }}
           className="max-w-3xl mx-auto text-center mb-16"
         >
-          <span className="text-primary font-medium text-sm uppercase tracking-widest mb-4 block">
-            Who We Work With
-          </span>
+          <span className="badge-gradient mb-4 inline-block">Who We Work With</span>
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
-            Built for ambitious tech founders
+            Built for <span className="text-gradient">ambitious founders</span>
           </h2>
         </motion.div>
 
@@ -63,16 +59,16 @@ export const AudienceSection = () => {
               key={audience.title}
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group text-center p-6 bg-card border border-border hover:border-primary/50 transition-all duration-300"
+              transition={{ duration: 0.5, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
+              className="group glass-card-hover p-8 text-center"
             >
-              <div className="w-14 h-14 bg-primary/10 border border-primary/30 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+              <div className="feature-icon mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <audience.icon className="w-7 h-7 text-primary" />
               </div>
               <h3 className="font-display text-lg font-bold text-foreground mb-1">
                 {audience.title}
               </h3>
-              <span className="text-primary text-sm font-medium block mb-3">
+              <span className="text-primary text-sm font-medium block mb-4">
                 {audience.subtitle}
               </span>
               <p className="text-muted-foreground text-sm leading-relaxed">
