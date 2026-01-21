@@ -1,6 +1,21 @@
 import { Mail, Linkedin, Twitter, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
+// Tyche Logo Component
+const TycheLogo = () => (
+  <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#8B5CF6" />
+        <stop offset="50%" stopColor="#A855F7" />
+        <stop offset="100%" stopColor="#F97316" />
+      </linearGradient>
+    </defs>
+    <rect width="100" height="100" rx="20" fill="url(#footerLogoGradient)"/>
+    <path d="M30 35H70V45H55V70H45V45H30V35Z" fill="white"/>
+  </svg>
+);
+
 const footerLinks = {
   services: [
     { label: "Product Marketing", href: "/#services" },
@@ -11,6 +26,7 @@ const footerLinks = {
   company: [
     { label: "About", href: "/about" },
     { label: "How It Works", href: "/#process" },
+    { label: "Tools We Use", href: "/#tools" },
     { label: "Careers", href: "/careers" },
   ],
   resources: [
@@ -35,13 +51,11 @@ export const Footer = () => {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                <span className="font-heading font-bold text-white text-xl">T</span>
-              </div>
+              <TycheLogo />
               <span className="font-heading font-bold text-2xl">Tyche</span>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
-              AI-powered GTM systems for B2B founders who want leverage, not just activity.
+              AI-powered GTM systems for B2B founders who want leverage, not just activity. Results & usage-based pricing.
             </p>
             <div className="flex gap-3">
               {socialLinks.map((social) => (

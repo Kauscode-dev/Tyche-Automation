@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight, Calendar, MessageCircle } from "lucide-react";
+import { ArrowRight, Calendar, MessageCircle, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const CTASection = () => {
@@ -27,7 +27,7 @@ export const CTASection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.2 }}
-                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-white/80 text-sm font-medium mb-6"
+                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-white/80 text-sm font-medium mb-6 backdrop-blur-sm"
               >
                 <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
                 Available for new projects
@@ -46,10 +46,25 @@ export const CTASection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.4 }}
-                className="text-white/70 text-lg mb-10 max-w-2xl mx-auto"
+                className="text-white/70 text-lg mb-6 max-w-2xl mx-auto"
               >
                 Book a free strategy call. We'll audit your current GTM, identify quick wins, and show you exactly how we can help.
               </motion.p>
+
+              {/* Trust indicator */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: 0.45 }}
+                className="flex items-center justify-center gap-2 mb-8"
+              >
+                <div className="flex">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className={`w-4 h-4 ${star <= 4 ? 'fill-amber-400 text-amber-400' : 'fill-amber-400/50 text-amber-400/50'}`} />
+                  ))}
+                </div>
+                <span className="text-white/80 text-sm font-medium">4.9/5 from 50+ Founders</span>
+              </motion.div>
 
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -78,7 +93,7 @@ export const CTASection = () => {
                 transition={{ delay: 0.7 }}
                 className="mt-8 text-sm text-white/50"
               >
-                Free 30-min consultation • No commitment required • Response within 24 hours
+                Free 30-min consultation • Results & usage-based pricing • Response within 24 hours
               </motion.p>
             </div>
           </div>
