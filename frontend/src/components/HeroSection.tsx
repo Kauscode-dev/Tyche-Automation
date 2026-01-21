@@ -39,7 +39,10 @@ export const HeroSection = () => {
               <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 text-foreground">
                 Automate Your
                 <br />
-                <span className="glass-highlight text-gradient">Go-to-Market</span>
+                <span className="relative inline-block">
+                  <span className="absolute inset-0 bg-gradient-to-r from-primary/10 via-purple-500/10 to-accent/10 rounded-lg blur-sm" />
+                  <span className="relative bg-gradient-to-r from-primary via-purple-500 to-accent bg-clip-text text-transparent">Go-to-Market</span>
+                </span>
               </h1>
             </motion.div>
 
