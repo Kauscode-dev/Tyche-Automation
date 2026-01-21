@@ -1,22 +1,22 @@
 import { Navigation } from "@/components/Navigation";
 import { HeroSection } from "@/components/HeroSection";
-import { LogosSection } from "@/components/LogosSection";
-import { StatsSection } from "@/components/StatsSection";
+import { ToolsSection } from "@/components/ToolsSection";
 import { ServicesSection } from "@/components/ServicesSection";
 import { ProcessSection } from "@/components/ProcessSection";
+import { StatsSection } from "@/components/StatsSection";
 import { AudienceSection } from "@/components/AudienceSection";
 import { CTASection } from "@/components/CTASection";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background overflow-x-hidden">
+    <div className="min-h-screen bg-background">
       <Navigation />
       <HeroSection />
-      <LogosSection />
-      <StatsSection />
+      <ToolsSection />
       <ServicesSection />
       <ProcessSection />
+      <StatsSection />
       <AudienceSection />
       <CTASection />
       <Footer />
