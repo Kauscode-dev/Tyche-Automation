@@ -39,7 +39,7 @@ export const CTASection = () => {
                 transition={{ delay: 0.3 }}
                 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-6"
               >
-                Ready to automate your GTM?
+                Start with the AI + GTM Audit
               </motion.h2>
 
               <motion.p
@@ -48,7 +48,7 @@ export const CTASection = () => {
                 transition={{ delay: 0.4 }}
                 className="text-white/70 text-lg mb-6 max-w-2xl mx-auto"
               >
-                Book a free strategy call. We'll audit your current GTM, identify quick wins, and show you exactly how we can help.
+                If you want clarity before spending big money, start here. In one week, you will know what to fix, what to build, and what not to waste money on.
               </motion.p>
 
               {/* Trust indicator */}
@@ -72,17 +72,17 @@ export const CTASection = () => {
                 transition={{ delay: 0.5 }}
                 className="flex flex-col sm:flex-row gap-4 justify-center"
               >
-                <a href="https://cal.id/kaustubh-ai/quicksync" target="_blank" rel="noopener noreferrer">
+                <a href="https://calendly.com/tyche-automation/audit" target="_blank" rel="noopener noreferrer">
                   <Button size="xl" className="bg-white text-foreground hover:bg-white/90 rounded-full font-bold shadow-xl">
                     <Calendar className="w-5 h-5" />
-                    Book Strategy Call
+                    Book your AI + GTM Audit
                     <ArrowRight className="w-5 h-5" />
                   </Button>
                 </a>
-                <a href="mailto:kaustubh@tycheautomation.online">
+                <a href="mailto:hello@tycheautomation.com">
                   <Button size="xl" variant="outline" className="border-white/30 text-white hover:bg-white/10 rounded-full">
                     <MessageCircle className="w-5 h-5" />
-                    Send a Message
+                    Get in Touch
                   </Button>
                 </a>
               </motion.div>

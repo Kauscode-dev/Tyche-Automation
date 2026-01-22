@@ -6,7 +6,7 @@ import { Link, useLocation } from "react-router-dom";
 import { MovingBanner } from "@/components/MovingBanner";
 
 const navLinks = [
-  { label: "Services", href: "/#services" },
+  { label: "Services", href: "/services" },
   { label: "How It Works", href: "/#process" },
   { label: "Tools", href: "/#tools" },
   { label: "About", href: "/about" },

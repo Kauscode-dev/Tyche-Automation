@@ -26,7 +26,7 @@ export const HeroSection = () => {
             >
               <span className="glass-card px-4 py-2 text-sm font-medium text-foreground inline-flex items-center gap-2">
                 <Sparkles className="w-4 h-4 text-primary" />
-                AI-Powered GTM for B2B Founders
+                AI-Led GTM Systems
               </span>
             </motion.div>
 
@@ -37,11 +37,13 @@ export const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 text-foreground">
-                Automate Your
+                AI-Led GTM Systems
+                <br />
+                for
                 <br />
                 <span className="relative inline-block">
                   <span className="absolute inset-0 bg-gradient-to-r from-primary/10 via-purple-500/10 to-accent/10 rounded-lg blur-sm" />
-                  <span className="relative bg-gradient-to-r from-primary via-purple-500 to-accent bg-clip-text text-transparent">Go-to-Market</span>
+                  <span className="relative bg-gradient-to-r from-primary via-purple-500 to-accent bg-clip-text text-transparent">B2B Founders</span>
                 </span>
               </h1>
             </motion.div>
@@ -53,7 +55,7 @@ export const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg sm:text-xl text-muted-foreground mb-8 leading-relaxed font-body"
             >
-              We build AI-powered systems that handle your outbound, content, and automation—so you can focus on closing deals, not chasing leads.
+              We help early-stage B2B founders design and build AI-powered GTM workflows that bring clarity, consistency, and scale.
             </motion.p>
 
             {/* Trust Points with Vector Icons */}
@@ -64,9 +66,9 @@ export const HeroSection = () => {
               className="flex flex-wrap gap-4 mb-8"
             >
               {[
-                { icon: Zap, text: "No SDR Army Needed" },
-                { icon: Target, text: "Results in 2-4 Weeks" },
-                { icon: CheckCircle, text: "Usage-Based Pricing" },
+                { icon: CheckCircle, text: "Systems, Not Services" },
+                { icon: Target, text: "Hands-On Building" },
+                { icon: Zap, text: "Founder-Friendly Pricing" },
               ].map((point) => (
                 <div key={point.text} className="flex items-center gap-2 text-sm text-muted-foreground glass-card px-3 py-1.5">
                   <point.icon className="w-4 h-4 text-primary" />
@@ -82,9 +84,9 @@ export const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4 mb-8"
             >
-              <a href="https://cal.id/kaustubh-ai/quicksync" target="_blank" rel="noopener noreferrer">
+              <a href="https://calendly.com/tyche-automation/audit" target="_blank" rel="noopener noreferrer">
                 <Button variant="gradient" size="xl">
-                  Book a Strategy Call
+                  Book an AI + GTM Audit
                   <ArrowRight className="w-5 h-5" />
                 </Button>
               </a>

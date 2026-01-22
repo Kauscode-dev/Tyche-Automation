@@ -45,7 +45,7 @@ export const Footer = () => {
               <span className="font-heading font-bold text-2xl">Tyche</span>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
-              AI-powered GTM systems for B2B founders who want leverage, not just activity. Results & usage-based pricing.
+              Tyche builds AI-powered GTM systems for B2B founders who want clarity, control, and scale.
             </p>
             <div className="flex gap-3">
               {socialLinks.map((social) => (
