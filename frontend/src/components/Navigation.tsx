@@ -61,9 +61,6 @@ export const Navigation = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2 group">
               <TycheLogo />
-              <span className="font-heading font-bold text-2xl text-foreground">
-                Tyche
-              </span>
             </Link>
 
             {/* Desktop Navigation */}

@@ -84,7 +84,7 @@ export const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4 mb-8"
             >
-              <a href="https://calendly.com/tyche-automation/audit" target="_blank" rel="noopener noreferrer">
+              <a href="https://cal.id/kaustubh-ai/quicksync" target="_blank" rel="noopener noreferrer">
                 <Button variant="gradient" size="xl">
                   Book an AI + GTM Audit
                   <ArrowRight className="w-5 h-5" />

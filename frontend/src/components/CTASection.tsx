@@ -72,7 +72,7 @@ export const CTASection = () => {
                 transition={{ delay: 0.5 }}
                 className="flex flex-col sm:flex-row gap-4 justify-center"
               >
-                <a href="https://calendly.com/tyche-automation/audit" target="_blank" rel="noopener noreferrer">
+                <a href="https://cal.id/kaustubh-ai/quicksync" target="_blank" rel="noopener noreferrer">
                   <Button size="xl" className="bg-white text-foreground hover:bg-white/90 rounded-full font-bold shadow-xl">
                     <Calendar className="w-5 h-5" />
                     Book your AI + GTM Audit

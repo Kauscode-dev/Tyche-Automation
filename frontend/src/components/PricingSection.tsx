@@ -125,7 +125,7 @@ export const PricingSection = () => {
                 size="lg"
                 className="w-full"
               >
-                <a href="https://calendly.com/tyche-automation/audit" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                <a href="https://cal.id/kaustubh-ai/quicksync" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
                   {tier.cta}
                   <ArrowRight className="w-4 h-4" />
                 </a>
@@ -142,9 +142,9 @@ export const PricingSection = () => {
           className="glass-card p-6 text-center"
         >
           <p className="text-muted-foreground text-sm">
-            <span className="font-semibold text-foreground">Implementation pricing</span> depends on number of workflows, tool integrations, and team involvement.
+            <span className="font-semibold text-foreground">Hiring a single SDR can cost you more than 12-15 Lakhs per annum, that too without results guarantee,</span> our Implementation pricing depends on number of workflows, tool integrations, and team involvement.
             <br />
-            Most implementations fall between <span className="font-semibold text-foreground">₹75,000 to ₹2,00,000 per month</span>.
+            Most implementations fall between <span className="font-semibold text-foreground">₹75,000 to ₹2,00,000 per project</span>.
             <br />
             Final pricing shared after the audit.
           </p>

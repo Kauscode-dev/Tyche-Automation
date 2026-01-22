@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { CheckCircle, XCircle } from "lucide-react";
+import { CheckCircle, XCircle, Target, Zap, ArrowRight, BarChart3, Users, Clock } from "lucide-react";
 
 export const AudienceSection = () => {
   const ref = useRef(null);
@@ -87,26 +87,33 @@ export const AudienceSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-16 glass-card p-8"
+          className="mt-16"
         >
-          <h3 className="font-heading text-2xl font-bold text-foreground mb-6 text-center">
+          <h3 className="font-heading text-2xl font-bold text-foreground mb-8 text-center">
             How This Helps You
           </h3>
-          <div className="grid sm:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              "Clear GTM direction",
-              "Less manual work",
-              "Faster follow-ups",
-              "Cleaner CRM data",
-              "Easier hiring and onboarding",
-              "More time back",
+              { title: "Clear GTM Direction", Component: Target },
+              { title: "Less Manual Work", Component: Zap },
+              { title: "Faster Follow-ups", Component: ArrowRight },
+              { title: "Cleaner CRM Data", Component: BarChart3 },
+              { title: "Easier Hiring & Onboarding", Component: Users },
+              { title: "More Time Back", Component: Clock },
             ].map((benefit) => (
-              <div key={benefit} className="text-center">
-                <p className="text-muted-foreground">{benefit}</p>
-              </div>
+              <motion.div
+                key={benefit.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.4, delay: 0.4 }}
+                className="glass-card p-6 text-center hover:shadow-lg transition-all"
+              >
+                <benefit.Component className="w-10 h-10 mx-auto mb-3 text-primary" />
+                <p className="font-heading font-semibold text-foreground">{benefit.title}</p>
+              </motion.div>
             ))}
           </div>
-          <p className="text-center text-sm text-muted-foreground mt-6">
+          <p className="text-center text-muted-foreground mt-8 text-lg font-semibold">
             The system works even when you step away.
           </p>
         </motion.div>

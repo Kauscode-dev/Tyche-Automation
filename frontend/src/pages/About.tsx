@@ -111,7 +111,7 @@ const About = () => {
                 transition={{ delay: index * 0.1 }}
                 className="p-6 bg-white rounded-xl border border-border text-center"
               >
-                <span className="text-3xl mb-4 block">❌</span>
+                <XCircle className="w-8 h-8 mx-auto mb-4 text-red-500" />
                 <p className="text-foreground font-medium">{problem}</p>
               </motion.div>
             ))}

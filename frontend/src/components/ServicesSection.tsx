@@ -1,7 +1,8 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, XOctagon, AlertTriangle, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export const ServicesSection = () => {
   const ref = useRef(null);
@@ -29,11 +30,11 @@ export const ServicesSection = () => {
           </p>
           
           <div className="flex justify-center">
-            <Button asChild variant="outline" size="lg">
-              <a href="/services" className="flex items-center gap-2">
+            <Button variant="outline" size="lg" asChild>
+              <Link to="/services" className="flex items-center gap-2">
                 View Details
                 <ArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
             </Button>
           </div>
         </motion.div>
@@ -41,18 +42,19 @@ export const ServicesSection = () => {
         {/* Key points grid */}
         <div className="grid sm:grid-cols-3 gap-6">
           {[
-            "We do not sell leads",
-            "We do not promise shortcuts",
-            "We build repeatable systems",
+            { text: "We do not sell leads", Component: XOctagon },
+            { text: "We do not promise shortcuts", Component: AlertTriangle },
+            { text: "We build repeatable systems", Component: Sparkles },
           ].map((point, index) => (
             <motion.div
-              key={point}
+              key={point.text}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-              className="glass-card p-6 text-center"
+              className="glass-card p-8 text-center hover:shadow-xl transition-all border border-primary/20 hover:border-primary/50"
             >
-              <p className="font-heading font-semibold text-foreground">{point}</p>
+              <point.Component className="w-12 h-12 mx-auto mb-4 text-primary" />
+              <p className="font-heading font-bold text-lg text-foreground">{point.text}</p>
             </motion.div>
           ))}
         </div>

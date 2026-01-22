@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
 
 const bannerMessages = [
-  "🚀 Build systems, not spreadsheets",
-  "💡 Your GTM should run while you sleep",
-  "📈 10x your pipeline without 10x the effort",
-  "⚡ AI-powered outreach that actually converts",
-  "🎯 Stop chasing leads. Start closing deals.",
-  "🔥 From cold outbound to warm conversations",
-  "✨ Scale like a Fortune 500, move like a startup",
-  "💪 Built by founders, for founders",
+  "Build systems, not spreadsheets",
+  "Your GTM should run while you sleep",
+  "10x your pipeline without 10x the effort",
+  "AI-powered outreach that actually converts",
+  "Stop chasing leads. Start closing deals.",
+  "From cold outbound to warm conversations",
+  "Scale like a Fortune 500, move like a startup",
+  "Built by founders, for founders",
 ];
 
 export const MovingBanner = () => {
