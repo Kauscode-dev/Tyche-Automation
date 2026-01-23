@@ -29,14 +29,23 @@ export const ServicesSection = () => {
             Tyche is a GTM consulting and systems firm. We help you understand how GTM really works today, identify what can be automated, design clear workflows, use AI to reduce manual work, and set up tools so they work together.
           </p>
           
-          <div className="flex justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="outline" size="lg" asChild>
               <Link to="/services" className="flex items-center gap-2">
                 View Details
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </Button>
+            <Button variant="outline" size="lg" asChild>
+              <a href="https://form.typeform.com/to/FbzCJwTM" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                Quick Survey
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </Button>
           </div>
+          <p className="text-muted-foreground text-sm mt-4 max-w-2xl mx-auto">
+            Answer few simple questions to get a free expert consultation
+          </p>
         </motion.div>
 
         {/* Key points grid */}

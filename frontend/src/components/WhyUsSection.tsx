@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Check, Zap, Shield, Clock, Target, Lightbulb } from "lucide-react";
+import { Check, Zap, Shield, Clock, Target, Lightbulb, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const reasons = [
   {
@@ -95,6 +96,24 @@ export const WhyUsSection = () => {
               </motion.div>
             ))}
           </div>
+
+          {/* Survey CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="mt-12 text-center lg:col-span-2"
+          >
+            <p className="text-muted-foreground mb-4">
+              Ready to get started? Answer a few simple questions to get a free expert consultation.
+            </p>
+            <a href="https://form.typeform.com/to/FbzCJwTM" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="gradient">
+                Start Free Pre-Audit Survey
+                <ArrowRight className="w-4 h-4" />
+              </Button>
+            </a>
+          </motion.div>
         </div>
       </div>
     </section>

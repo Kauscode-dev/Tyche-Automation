@@ -79,10 +79,10 @@ export const CTASection = () => {
                     <ArrowRight className="w-5 h-5" />
                   </Button>
                 </a>
-                <a href="mailto:hello@tycheautomation.com">
+                <a href="https://form.typeform.com/to/FbzCJwTM" target="_blank" rel="noopener noreferrer">
                   <Button size="xl" variant="outline" className="border-white/30 text-white hover:bg-white/10 rounded-full">
                     <MessageCircle className="w-5 h-5" />
-                    Get in Touch
+                    Free Quick Survey
                   </Button>
                 </a>
               </motion.div>

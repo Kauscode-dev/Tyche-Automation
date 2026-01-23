@@ -98,6 +98,18 @@ export const HeroSection = () => {
               </Button>
             </motion.div>
 
+            {/* Survey CTA */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="flex items-center gap-2 text-sm text-muted-foreground"
+            >
+              <a href="https://form.typeform.com/to/FbzCJwTM" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">
+                → Answer few simple questions to get a free expert consultation
+              </a>
+            </motion.div>
+
             {/* Trust Badge */}
             <motion.div
               initial={{ opacity: 0 }}
